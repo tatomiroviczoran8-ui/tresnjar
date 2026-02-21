@@ -7,10 +7,21 @@
 
 <style>
 body {
-  margin: 0;
-  padding: 0;
-  background: #1c1c1c;
-  font-family: Georgia, "Times New Roman", serif;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: url("20190430_083808.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+}
 }
 
 .tresnjar-monografija {
