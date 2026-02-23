@@ -74,7 +74,42 @@ font-weight: 600;
 <meta name="description" content="Trešnjar kod Žiče u blizini Kraljeva – istorija sela, rudnici magnezita, industrijsko nasleđe, priroda planine Stolovi i značajna mesta u okolini.">
 </head>
 <body>
+<audio id="bg-music" loop>
+  <source src="Za_sajt_pesma.m4a" type="audio/mp4">
+</audio>
 
+<button id="music-btn" style="
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #222;
+color: white;
+border: none;
+padding: 10px 15px;
+border-radius: 20px;
+cursor: pointer;
+font-size: 14px;
+z-index: 999;
+">
+🔊 Pusti muziku
+</button>
+
+<script>
+const audio = document.getElementById("bg-music");
+const btn = document.getElementById("music-btn");
+
+audio.volume = 0.2;
+
+btn.addEventListener("click", function() {
+  if (audio.paused) {
+    audio.play();
+    btn.innerHTML = "🔇 Isključi muziku";
+  } else {
+    audio.pause();
+    btn.innerHTML = "🔊 Pusti muziku";
+  }
+});
+</script>
 <section class="tresnjar-monografija">
 
 <h1>Trešnjar kod Žiče (Kraljevo) – Istorija, priroda i digitalni vodič</h1>
